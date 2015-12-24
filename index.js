@@ -22,10 +22,14 @@ function LiterallyCanvasReplay(opts){
 
   var processActionsToIndex = function(actions, index) {
     canvasActions.execute('clear');
-    for (var i = 0; i <= index && i < actions.length; i++) {
+
+    if (index > actions.length - 1) index = actions.length - 1;
+    for (var i = 0; i <= index; i++) {
       action = actions[i];
       canvasActions.execute(action.action, action);
     }
+
+    frameControls.setActiveDot(index);
   };
 
   return {

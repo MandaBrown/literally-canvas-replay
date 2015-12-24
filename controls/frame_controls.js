@@ -4,6 +4,7 @@ module.exports = FrameControls;
 
 function FrameControls(opts) {
   var frameControlElement = document.createElement('div');
+  var actionDots = [];
 
   var addFrameControlElement = function(canvasElement) {
     var nextEl = canvasElement.nextSibling;
@@ -24,12 +25,20 @@ function FrameControls(opts) {
     for (var i = 0; i < actionCount; i++){
       actionDot = new ActionDot(i, onActionDotClick);
       frameControlElement.appendChild(actionDot.el);
+      actionDots.push(actionDot);
     }
+  };
+
+  var setActiveDot = function(activeDotIndex){
+    actionDots.forEach(function(actionDot){
+      actionDot.setActiveState(actionDot.actionIndex === activeDotIndex);
+    });
   };
 
   addFrameControlElement(opts.canvasElement);
 
   return {
-    loadActions: loadActions
+    loadActions: loadActions,
+    setActiveDot: setActiveDot
   };
 }
