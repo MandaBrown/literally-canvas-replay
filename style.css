@@ -18,3 +18,7 @@
   height: 0.5rem;
   display: inline-block;
 }
+
+.canvas {
+  border: green solid 2px;
+}
