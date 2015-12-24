@@ -1,7 +1,20 @@
 .heading {
-  margin: 10rem;
+  margin: 5rem 0rem 1rem 0rem;
   font-size: 42px;
   color: green;
   text-align: center;
   font-family: 'Josefin Sans';
+}
+
+.dots {
+  text-align: center;
+}
+
+.dot {
+  margin: 1rem;
+  border-radius: 50%;
+  border: green solid 2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
 }
