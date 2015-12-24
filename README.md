@@ -7,6 +7,7 @@ the interactive canvas session.
 
 - `npm install`: Installs dev dependencies.
 - `npm run start`: Starts [budo](https://github.com/mattdesl/budo)
+- `npm run install`: Builds `bundle.js`
 
 ## Message Format
 
@@ -17,7 +18,9 @@ the interactive canvas session.
 ## Actions
 
 ~~- __drawStart__: Thrown away.~~
+
 ~~- __drawEnd__: Thrown away.~~
+
 - __shape__: New `:shape` to save to the canvas.
 - __clear__: Clear the canvas.
 - __turnOnDrawing__: Turn on student drawing indicator.
