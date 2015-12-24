@@ -22,3 +22,17 @@
 .canvas {
   border: green solid 2px;
 }
+
+.frame-control {
+  text-align: center;
+}
+
+.action-dot {
+  margin: 1rem;
+  border-radius: 50%;
+  border: green solid 2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
