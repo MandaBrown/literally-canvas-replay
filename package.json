@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/MandaBrown/literally-canvas-replay#readme",
   "devDependencies": {
+    "browserify": "^12.0.1",
     "budo": "^7.1.0"
   }
 }
