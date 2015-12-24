@@ -14,10 +14,18 @@ function LiterallyCanvasReplay(opts){
   });
 
   var processActions = function(actions) {
-    frameControls.loadActions(actions.length);
-    actions.forEach(function(action){
-      canvasActions.execute(action.action, action);
+    frameControls.loadActions(actions.length, function(actionIndex) {
+      processActionsToIndex(actions, actionIndex);
     });
+    processActionsToIndex(actions, actions.length);
+  };
+
+  var processActionsToIndex = function(actions, index) {
+    // canvasActions.execute('clear');
+    for (var i = 0; i <= index && i < actions.length; i++) {
+      action = actions[i];
+      canvasActions.execute(action.action, action);
+    }
   };
 
   return {

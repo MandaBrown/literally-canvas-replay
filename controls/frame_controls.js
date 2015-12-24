@@ -18,11 +18,7 @@ function FrameControls(opts) {
     }
   };
 
-  var onActionDotClick = function(actionIndex) {
-    console.log('action dot was clicked', actionIndex);
-  };
-
-  var loadActions = function(actionCount) {
+  var loadActions = function(actionCount, onActionDotClick) {
     var actionDot;
 
     for (var i = 0; i < actionCount; i++){
