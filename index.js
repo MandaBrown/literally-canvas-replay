@@ -7,7 +7,15 @@ function LiterallyCanvasReplay(opts){
   opts = opts || {};
 
   var literalCanvas = LC.init(opts.canvasElement, opts.lcOptions);
-  var actions = Actions.new(literalCanvas);
+  var canvasActions = new Actions(literalCanvas);
 
-  return {};
+  var processActions = function(actions) {
+    actions.forEach(function(action){
+      canvasActions.execute(action.action, action);
+    });
+  };
+
+  return {
+    processActions: processActions
+  };
 }
