@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "budo demo.js:bundle.js --live",
-    "build": "browserify demo.js > bundle.js"
+    "build": "browserify -t uglifyify demo.js > bundle.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MandaBrown/literally-canvas-replay#readme",
   "devDependencies": {
     "browserify": "^12.0.1",
-    "budo": "^7.1.0"
+    "budo": "^7.1.0",
+    "uglifyify": "^3.0.1"
   }
 }
