@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MandaBrown/literally-canvas-replay/issues"
   },
-  "homepage": "https://github.com/MandaBrown/literally-canvas-replay#readme"
+  "homepage": "https://github.com/MandaBrown/literally-canvas-replay#readme",
+  "devDependencies": {
+    "budo": "^7.1.0"
+  }
 }
