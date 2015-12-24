@@ -8,6 +8,9 @@ function LiterallyCanvasReplay(opts){
   opts = opts || {};
 
   var literalCanvas = LC.init(opts.canvasElement, opts.lcOptions);
+  // Hack to turn off drawing.
+  literalCanvas.setTool(new LC.tools.Eyedropper(literalCanvas));
+
   var canvasActions = new Actions(literalCanvas);
   var frameControls = new FrameControls({
     canvasElement: opts.canvasElement
