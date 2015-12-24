@@ -1,13 +1,16 @@
 var Shape = require('./shape.js');
+var Clear = require('./clear.js');
 
 module.exports = Actions;
 
 function Actions(literalCanvas){
 
   var shape = new Shape(literalCanvas);
+  var clear = new Clear(literalCanvas);
 
   var actions = [
-    shape
+    shape,
+    clear
   ];
 
   var findActionByName = function(actionName) {

@@ -14,5 +14,5 @@ function Shape(canvas){
   return {
     name: name,
     action: action
-  }
+  };
 }

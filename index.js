@@ -21,7 +21,7 @@ function LiterallyCanvasReplay(opts){
   };
 
   var processActionsToIndex = function(actions, index) {
-    // canvasActions.execute('clear');
+    canvasActions.execute('clear');
     for (var i = 0; i <= index && i < actions.length; i++) {
       action = actions[i];
       canvasActions.execute(action.action, action);
