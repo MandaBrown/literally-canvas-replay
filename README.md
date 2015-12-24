@@ -3,6 +3,11 @@
 When given an element to attach to and an array of whiteboard messages, this library builds a nice viewer for reviewing
 the interactive canvas session.
 
+## Setup for Development
+
+- `npm install`: Installs dev dependencies.
+- `npm run start`: Starts [budo](https://github.com/mattdesl/budo)
+
 ## Message Format
 
 - __displayName__: Person drawing
