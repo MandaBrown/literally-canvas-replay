@@ -1,22 +1,9 @@
 .heading {
-  margin: 5rem 0rem 1rem 0rem;
+  margin: 5rem 0rem 3rem 0rem;
   font-size: 42px;
   color: green;
   text-align: center;
   font-family: 'Josefin Sans';
-}
-
-.dots {
-  text-align: center;
-}
-
-.dot {
-  margin: 1rem;
-  border-radius: 50%;
-  border: green solid 2px;
-  width: 0.5rem;
-  height: 0.5rem;
-  display: inline-block;
 }
 
 .canvas {
@@ -35,4 +22,9 @@
   height: 0.5rem;
   display: inline-block;
   cursor: pointer;
+}
+
+.action-dot.active {
+  background: green;
+  box-shadow: 0px 0px 9px 0px green;
 }
