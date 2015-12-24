@@ -4,7 +4,8 @@
   "description": "When given an element to attach to and an array of whiteboard messages, this library builds a nice viewer for reviewing the interactive canvas session.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo demo.js"
   },
   "repository": {
     "type": "git",
