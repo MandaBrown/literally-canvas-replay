@@ -1,0 +1,19 @@
+{
+  "name": "literally-canvas-replay",
+  "version": "1.0.0",
+  "description": "When given an element to attach to and an array of whiteboard messages, this library builds a nice viewer for reviewing the interactive canvas session.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MandaBrown/literally-canvas-replay.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MandaBrown/literally-canvas-replay/issues"
+  },
+  "homepage": "https://github.com/MandaBrown/literally-canvas-replay#readme"
+}
