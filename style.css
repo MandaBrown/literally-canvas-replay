@@ -126,5 +126,5 @@ body {
 }
 
 div .student-drawing.transitioning {
-  box-shadow: 0px 0px 50px 2px yellow;
+  box-shadow: 0px 0px 50px 2px hsla(50, 95%, 75%, 0.50);
 }
