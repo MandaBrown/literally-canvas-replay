@@ -60,6 +60,11 @@
   width: 2rem;
   border-radius: 2rem;
   border: 2px green solid;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10  */
 }
 
 .arrow-control div:hover {
