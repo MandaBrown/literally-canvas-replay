@@ -83,16 +83,23 @@
 
 .student-drawing {
   font-family: 'Josefin Sans';
-  color: green;
   right: 0;
   padding: 0.5rem;
   margin: 1rem;
-  border: 1px green solid;
+  border: 1px grey solid;
   border-radius: 1rem;
+  color: grey;
 }
 
 .student-drawing:after {
   content: ' Off';
+}
+
+.student-drawing.active {
+  color: green;
+  font-weight: bold;
+  border: 2px green solid;
+  box-shadow: 0px 0px 9px 0px green;
 }
 
 .student-drawing.active:after {
