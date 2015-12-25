@@ -1,16 +1,19 @@
 var Shape = require('./shape.js');
 var Clear = require('./clear.js');
+var TurnOnDrawing = require('./turnOnDrawing.js');
 
 module.exports = Actions;
 
-function Actions(literalCanvas){
+function Actions(literalCanvas, indicators){
 
   var shape = new Shape(literalCanvas);
   var clear = new Clear(literalCanvas);
+  var turnOnDrawing = new TurnOnDrawing(indicators.findByName('studentDrawing'));
 
   var actions = [
     shape,
-    clear
+    clear,
+    turnOnDrawing
   ];
 
   var findActionByName = function(actionName) {

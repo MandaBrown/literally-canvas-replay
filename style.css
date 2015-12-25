@@ -80,3 +80,21 @@
 .arrow-control div:last-child {
   float: right;
 }
+
+.student-drawing {
+  font-family: 'Josefin Sans';
+  color: green;
+  right: 0;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 1px green solid;
+  border-radius: 1rem;
+}
+
+.student-drawing:after {
+  content: ' Off';
+}
+
+.student-drawing.active:after {
+  content: ' On';
+}
