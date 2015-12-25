@@ -1,10 +1,14 @@
+var ShinyTransition = require('../utils/shiny-transition.js')
+
 module.exports = StudentDrawing;
 
 function StudentDrawing() {
   var name = 'studentDrawing';
   var state = null;
+  var pending = true;
   var el = document.createElement('div');
   el.innerText = 'Student Drawing'
+  var transition = new ShinyTransition(el);
 
   var addElement = function(parentEl) {
     parentEl.appendChild(el);
@@ -12,22 +16,31 @@ function StudentDrawing() {
 
   var updateState = function(newState){
     state = newState;
+    if (pending) return;
+
     if (state)
-      el.className = 'student-drawing active';
+      transition.changeClass('student-drawing active');
     else
-      el.className = 'student-drawing';
+      transition.changeClass('student-drawing');
   };
 
   var clear = function() {
-    updateState(false);
+    state = false;
+    pending = true;
   };
 
-  updateState(false);
+  var runPending = function() {
+    pending = false;
+    updateState(state);
+  };
+
+  clear();
 
   return {
     name: name,
     updateState: updateState,
     addElement: addElement,
-    clear: clear
+    clear: clear,
+    runPending: runPending
   };
 }

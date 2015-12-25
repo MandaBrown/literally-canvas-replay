@@ -85,10 +85,15 @@
   font-family: 'Josefin Sans';
   right: 0;
   padding: 0.5rem;
-  margin: 1rem;
-  border: 1px grey solid;
+  margin: 1.5rem;
+  border: 2px grey solid;
   border-radius: 1rem;
   color: grey;
+  -webkit-transition: box-shadow 0.5s ease-out;
+  transition: box-shadow 0.5s ease-out;
+  width: 10rem;
+  text-align: center;
+  background: hsla(0, 0%, 90%, 0.5);
 }
 
 .student-drawing:after {
@@ -109,6 +114,9 @@
 .notes {
   margin-top: 3rem;
   color: grey;
-  font-family: 'Josefin Sans';
   font-style: italic;
+}
+
+div .student-drawing.transitioning {
+  box-shadow: 0px 0px 50px 2px yellow;
 }
