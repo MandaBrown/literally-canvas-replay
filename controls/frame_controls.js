@@ -1,4 +1,5 @@
 var ActionDot = require('./action_dot.js');
+var MouseTrap = require('mousetrap');
 
 module.exports = FrameControls;
 
@@ -50,20 +51,25 @@ function FrameControls(opts) {
     var arrowControlElement = document.createElement('div');
     arrowControlElement.className = 'arrow-control';
 
+    var onForward = function(){
+      if (currentActiveDotIndex >= actionDots.length - 1) return;
+      activeDot = setActiveDot(currentActiveDotIndex + 1);
+      activeDot.triggerClick();
+    };
+    var onBack = function(){
+      if (currentActiveDotIndex == 0) return;
+      activeDot = setActiveDot(currentActiveDotIndex - 1);
+      activeDot.triggerClick();
+    };
+
     var backElement = document.createElement('div');
     var forwardElement = document.createElement('div');
     backElement.innerText = '<';
     forwardElement.innerText = '>';
-    backElement.addEventListener('click', function(){
-      if (currentActiveDotIndex == 0) return;
-      activeDot = setActiveDot(currentActiveDotIndex - 1);
-      activeDot.triggerClick();
-    });
-    forwardElement.addEventListener('click', function(){
-      if (currentActiveDotIndex >= actionDots.length - 1) return;
-      activeDot = setActiveDot(currentActiveDotIndex + 1);
-      activeDot.triggerClick();
-    });
+    backElement.addEventListener('click', onBack);
+    forwardElement.addEventListener('click', onForward);
+    Mousetrap.bind('left', onBack);
+    Mousetrap.bind('right', onForward);
 
     arrowControlElement.appendChild(backElement);
     arrowControlElement.appendChild(forwardElement);
