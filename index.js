@@ -17,7 +17,7 @@ function LiterallyCanvasReplay(opts){
   });
 
   var processActions = function(actions) {
-    frameControls.loadActions(actions.length, function(actionIndex) {
+    frameControls.loadActions(actions, function(actionIndex) {
       processActionsToIndex(actions, actionIndex);
     });
     processActionsToIndex(actions, actions.length);
@@ -29,7 +29,7 @@ function LiterallyCanvasReplay(opts){
     if (index > actions.length - 1) index = actions.length - 1;
     for (var i = 0; i <= index; i++) {
       action = actions[i];
-      canvasActions.execute(action.action, action);
+      canvasActions.execute(action.message.action, action.message);
     }
 
     frameControls.setActiveDot(index);

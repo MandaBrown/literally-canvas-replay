@@ -39,9 +39,9 @@ var clear = {
 };
 
 var actions = [
-  draw3,
-  clear,
-  draw3
+  { displayName: 'Yule Lord', sentAt: 'Christmas Eve', message: draw3 },
+  { displayName: 'Santa Claus', sentAt: 'Christmas Morning', message: clear },
+  { displayName: 'Yule Lord', sentAt: 'Yule Tide', message: draw3 }
 ];
 
 lcr = new LiterallyCanvasReplay(opts);

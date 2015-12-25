@@ -28,3 +28,17 @@
   background: green;
   box-shadow: 0px 0px 9px 0px green;
 }
+
+.meta-info {
+  margin: 1rem;
+  font-family: 'Josefin Sans';
+  font-size: 1rem;
+}
+
+.meta-info div {
+  display: inline-block;
+}
+
+.meta-info .sent-at:before {
+  content: "\00a0@\00a0";
+}
