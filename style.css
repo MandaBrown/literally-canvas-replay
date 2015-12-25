@@ -1,9 +1,13 @@
+body {
+  font-family: 'Josefin Sans';
+  background: hsl(0, 0%, 90%);
+}
+
 .heading {
   margin: 5rem 0rem 3rem 0rem;
   font-size: 42px;
   color: green;
   text-align: center;
-  font-family: 'Josefin Sans';
 }
 
 .canvas {
@@ -35,7 +39,6 @@
 
 .meta-info {
   margin: 1rem;
-  font-family: 'Josefin Sans';
   font-size: 1rem;
 }
 
@@ -48,7 +51,6 @@
 }
 
 .arrow-control {
-  font-family: 'Josefin Sans';
   color: green;
   cursor: pointer;
   padding-right: 10rem;
@@ -82,7 +84,6 @@
 }
 
 .student-drawing {
-  font-family: 'Josefin Sans';
   right: 0;
   padding: 0.5rem;
   margin: 1.5rem;
