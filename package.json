@@ -22,5 +22,8 @@
     "browserify": "^12.0.1",
     "budo": "^7.1.0",
     "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "mousetrap": "^1.5.3"
   }
 }
