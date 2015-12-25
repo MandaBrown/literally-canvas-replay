@@ -8,7 +8,7 @@ the interactive canvas session.
 - `npm install`: Installs dev dependencies.
 - `npm run start`: Starts [budo](https://github.com/mattdesl/budo)
 - `npm run build`: Builds `bundle.js` for demo page
-- `npm run build-dist`: Builds js and css for distribution *Not yet implemented*
+*- `npm run build-dist`: Builds js and css for distribution __Not yet implemented.__*
 
 ## Message Format
 
@@ -26,4 +26,4 @@ the interactive canvas session.
 - __clear__: Clear the canvas.
 - __turnOnDrawing__: Turn on student drawing indicator.
 - __turnOffDrawing__: Turn off student drawing indicator.
-- __drawBoundaries__: Sends `:width` and `:height` of the user's canvas. *Not yet implemented.*
+*- __drawBoundaries__: Sends `:width` and `:height` of the user's canvas. __Not yet implemented.__*
