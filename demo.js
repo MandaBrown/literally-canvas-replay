@@ -10,7 +10,8 @@ var lcOptions = {
   primaryColor: '#000',
   secondaryColor: 'transparent',
   backgroundColor: '#FFF',
-  imageSize: { width: MAX_IMAGE_WIDTH, height: MAX_IMAGE_HEIGHT }
+  imageSize: { width: MAX_IMAGE_WIDTH, height: MAX_IMAGE_HEIGHT },
+  keyboardShortcuts: false
 };
 
 var opts = {
