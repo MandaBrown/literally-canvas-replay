@@ -3,7 +3,6 @@ var StudentDrawing = require('./student_drawing.js');
 module.exports = Indicators;
 
 function Indicators(opts) {
-
   var indicators = [
     new StudentDrawing()
   ];
@@ -20,6 +19,12 @@ function Indicators(opts) {
     });
   };
 
+  var runPending = function() {
+    indicators.forEach(function(indicator){
+      indicator.runPending()
+    });
+  };
+
   var findByName = function(indicatorName) {
     filtered = indicators.filter(function(indicator){
       return indicator.name === indicatorName;
@@ -28,10 +33,19 @@ function Indicators(opts) {
     return filtered[0];
   };
 
+  var startReplay = function() {
+    clear();
+  };
+
+  var endReplay = function() {
+    runPending();
+  };
+
   addIndicatorElements(opts.canvasElement);
 
   return {
     findByName: findByName,
-    clear: clear
+    startReplay: startReplay,
+    endReplay: endReplay
   };
 }

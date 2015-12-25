@@ -33,7 +33,7 @@ function LiterallyCanvasReplay(opts){
 
   var processActionsToIndex = function(actions, index) {
     canvasActions.execute('clear');
-    indicators.clear();
+    indicators.startReplay();
 
     if (index > actions.length - 1) index = actions.length - 1;
     for (var i = 0; i <= index; i++) {
@@ -42,6 +42,7 @@ function LiterallyCanvasReplay(opts){
     }
 
     frameControls.setActiveDot(index);
+    indicators.endReplay();
   };
 
   return {
