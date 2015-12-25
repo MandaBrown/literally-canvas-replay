@@ -42,6 +42,7 @@ function ActionDot(action, actionIndex, metaInfoElement, onClick){
 
   return {
     el: el,
+    triggerClick: onElClick,
     actionIndex: actionIndex,
     setActiveState: setActiveState
   };

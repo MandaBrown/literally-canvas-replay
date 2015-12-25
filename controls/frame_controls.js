@@ -6,12 +6,14 @@ function FrameControls(opts) {
   var frameControlElement = document.createElement('div');
   var metaInfoElement = document.createElement('div');
   var actionDots = [];
+  var currentActiveDotIndex = null;
 
   var addFrameControlElement = function(canvasElement) {
     var nextEl = canvasElement.nextSibling;
     var parentEl = canvasElement.parentElement;
 
     frameControlElement.className = 'frame-control';
+    metaInfoElement.className = 'meta-info';
 
     if (nextEl == null) {
       parentEl.appendChild(frameControlElement);
@@ -19,8 +21,8 @@ function FrameControls(opts) {
       parentEl.insertBefore(frameControlElement, nextEl);
     }
 
-    metaInfoElement.className = 'meta-info';
     frameControlElement.appendChild(metaInfoElement);
+    addArrowControls();
   };
 
   var loadActions = function(actions, onActionDotClick) {
@@ -34,9 +36,38 @@ function FrameControls(opts) {
   };
 
   var setActiveDot = function(activeDotIndex){
-    actionDots.forEach(function(actionDot){
-      actionDot.setActiveState(actionDot.actionIndex === activeDotIndex);
+    var activeDot;
+    currentActiveDotIndex = activeDotIndex;
+    actionDots.forEach(function(actionDot) {
+      active = actionDot.actionIndex === activeDotIndex;
+      if (active) activeDot = actionDot;
+      actionDot.setActiveState(active);
     });
+    return activeDot;
+  };
+
+  var addArrowControls = function() {
+    var arrowControlElement = document.createElement('div');
+    arrowControlElement.className = 'arrow-control';
+
+    var backElement = document.createElement('div');
+    var forwardElement = document.createElement('div');
+    backElement.innerText = '<';
+    forwardElement.innerText = '>';
+    backElement.addEventListener('click', function(){
+      if (currentActiveDotIndex == 0) return;
+      activeDot = setActiveDot(currentActiveDotIndex - 1);
+      activeDot.triggerClick();
+    });
+    forwardElement.addEventListener('click', function(){
+      if (currentActiveDotIndex >= actionDots.length - 1) return;
+      activeDot = setActiveDot(currentActiveDotIndex + 1);
+      activeDot.triggerClick();
+    });
+
+    arrowControlElement.appendChild(backElement);
+    arrowControlElement.appendChild(forwardElement);
+    frameControlElement.appendChild(arrowControlElement);
   };
 
   addFrameControlElement(opts.canvasElement);
