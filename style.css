@@ -17,12 +17,28 @@ body {
   text-align: center;
 }
 
+.heading-text {
+  display: inline-block;
+  margin: 1.25rem;
+}
+
 .canvas {
   border: green solid 2px;
 }
 
 .frame-control {
   text-align: center;
+}
+
+.dot {
+  position: relative;
+  margin: 2rem;
+  top: 1.5rem;
+  border-radius: 50%;
+  border: grey solid 2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
 }
 
 .action-dot {
