@@ -34,6 +34,12 @@
   content: "\00a0@\00a0";
 }
 
+.meta-info .wb-action {
+  display: block;
+  font-variant: small-caps;
+  margin-top: 0.5rem;
+}
+
 .arrow-control {
   color: green;
   cursor: pointer;
