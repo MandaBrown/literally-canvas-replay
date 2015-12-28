@@ -20,6 +20,12 @@ function Actions(literalCanvas, indicators){
     turnOffDrawing
   ];
 
+  var allowedActions = function() {
+    return actions.map(function(action) {
+      return action.name;
+    });
+  };
+
   var findActionByName = function(actionName) {
     filtered = actions.filter(function(action){
       return action.name === actionName;
@@ -36,6 +42,7 @@ function Actions(literalCanvas, indicators){
   };
 
   return {
-    execute: execute
+    execute: execute,
+    allowedActions: allowedActions()
   };
 }

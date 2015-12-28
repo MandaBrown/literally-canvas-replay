@@ -25,6 +25,7 @@ function LiterallyCanvasReplay(opts){
   });
 
   var processActions = function(actions) {
+    actions = filterActions(actions);
     frameControls.loadActions(actions, function(actionIndex) {
       processActionsToIndex(actions, actionIndex);
     });
@@ -45,7 +46,17 @@ function LiterallyCanvasReplay(opts){
     indicators.endReplay();
   };
 
+  var filterActions = function(actions) {
+    return actions.filter(function(action){
+      return canvasActions.allowedActions.filter(function(a){
+        return action.message.action == a;
+      }).length > 0;
+    });
+  };
+
   return {
     processActions: processActions
   };
 }
+
+window.LCR = LiterallyCanvasReplay;
