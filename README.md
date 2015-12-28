@@ -23,13 +23,13 @@ the interactive canvas session.
 
 ## Actions
 
-~~- __drawStart__: Thrown away.~~
-
-~~- __drawEnd__: Thrown away.~~
-
 - __shape__: New `:shape` to save to the canvas.
 - __clear__: Clear the canvas.
 - __turnOnDrawing__: Turn on student drawing indicator.
 - __turnOffDrawing__: Turn off student drawing indicator.
+- __shapeDeleted__: Removes `:shape` from the canvas.
+- __shapeMoved__: Moves `:shape` on the canvas to a new location.
+- __shapeSelected__: Selects `:shape`.
 
 *- __drawBoundaries__: Sends `:width` and `:height` of the user's canvas. __Not yet implemented.__*
+*- __setBackground__: Toggles background images -- just 'graphPaper', so far. __Not yet implemented.__*
