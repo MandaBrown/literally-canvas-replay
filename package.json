@@ -25,7 +25,5 @@
     "uglify-js": "^2.6.1",
     "uglifyify": "^3.0.1"
   },
-  "dependencies": {
-    "mousetrap": "^1.5.3"
-  }
+  "dependencies": {}
 }

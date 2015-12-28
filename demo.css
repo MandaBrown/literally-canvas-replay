@@ -1,0 +1,44 @@
+body {
+  font-family: 'Josefin Sans';
+  background: hsl(0, 0%, 90%);
+}
+
+.content {
+  display: block;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading {
+  margin: 5rem 0rem 3rem 0rem;
+  font-size: 42px;
+  color: green;
+  text-align: center;
+}
+
+.heading-text {
+  display: inline-block;
+  margin: 1.25rem;
+}
+
+.canvas {
+  border: green solid 2px;
+}
+
+.dot {
+  position: relative;
+  margin: 2rem;
+  top: 1.5rem;
+  border-radius: 50%;
+  border: grey solid 2px;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+}
+
+.notes {
+  margin-top: 6rem;
+  color: grey;
+  font-style: italic;
+}
