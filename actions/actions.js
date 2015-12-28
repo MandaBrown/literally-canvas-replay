@@ -4,6 +4,7 @@ var TurnOnDrawing = require('./turnOnDrawing.js');
 var TurnOffDrawing = require('./turnOffDrawing.js');
 var ShapeSelected = require('./shapeSelected.js');
 var ShapeMoved = require('./shapeMoved.js');
+var ShapeDeleted = require('./shapeDeleted.js');
 
 module.exports = Actions;
 
@@ -16,6 +17,7 @@ function Actions(literalCanvas, indicators){
   var turnOffDrawing = new TurnOffDrawing(studentDrawingIndicator);
   var shapeSelected = new ShapeSelected(literalCanvas);
   var shapeMoved = new ShapeMoved(literalCanvas);
+  var shapeDeleted = new ShapeDeleted(literalCanvas);
 
   var actions = [
     shape,
@@ -23,7 +25,8 @@ function Actions(literalCanvas, indicators){
     turnOnDrawing,
     turnOffDrawing,
     shapeSelected,
-    shapeMoved
+    shapeMoved,
+    shapeDeleted
   ];
 
   var allowedActions = function() {
