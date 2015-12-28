@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "budo demo.js:bundle.js --live",
-    "build": "browserify -t uglifyify demo.js | uglifyjs -cm > bundle.js",
-    "build-dist": "browserify -t uglifyify demo.js | uglifyjs -cm > literally-canvas-replay.min.js"
+    "start": "budo demo.js:literally-canvas-replay.js --live",
+    "build": "browserify -t uglifyify demo.js | uglifyjs -cm > literally-canvas-replay.min.js"
   },
   "repository": {
     "type": "git",
