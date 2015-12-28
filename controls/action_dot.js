@@ -15,6 +15,10 @@ function ActionDot(action, actionIndex, metaInfoElement, onClick){
   sentAtEl.className = 'sent-at';
   sentAtEl.innerText = action.sentAt;
 
+  var actionEl = document.createElement('div');
+  actionEl.className = 'wb-action';
+  actionEl.innerText = action.message.action;
+
   var onElClick = function() {
     onClick(actionIndex);
   };
@@ -22,7 +26,8 @@ function ActionDot(action, actionIndex, metaInfoElement, onClick){
   var setMetaInfo = function() {
     metaInfoElement.innerHTML =
       displayNameEl.outerHTML +
-      sentAtEl.outerHTML;
+      sentAtEl.outerHTML +
+      actionEl.outerHTML;
   };
 
   var setActiveState = function(active) {
