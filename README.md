@@ -6,8 +6,9 @@ the interactive canvas session.
 ## Setup for Development
 
 - `npm install`: Installs dev dependencies.
-- `npm run start`: Starts [budo](https://github.com/mattdesl/budo)
-- `npm run build`: Builds js
+- `npm run start`: Starts [budo](https://github.com/mattdesl/budo).
+- `npm run build`: Builds js for demo.
+- `npm run build-dist`: Builds js for distribution.
 
 *You may need to install uglify globally depending on your system: `npm install -g uglify-js`*
 
