@@ -1,3 +1,4 @@
 node_modules/
 npm-debug.log
 bundle.js
+literally-canvas-replay.min.js
