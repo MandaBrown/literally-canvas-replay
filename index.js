@@ -49,3 +49,5 @@ function LiterallyCanvasReplay(opts){
     processActions: processActions
   };
 }
+
+window.LCR = LiterallyCanvasReplay;
