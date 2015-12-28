@@ -1,5 +1,4 @@
 var ActionDot = require('./action_dot.js');
-var MouseTrap = require('mousetrap');
 
 module.exports = FrameControls;
 
@@ -61,6 +60,14 @@ function FrameControls(opts) {
       activeDot = setActiveDot(currentActiveDotIndex - 1);
       activeDot.triggerClick();
     };
+    var onKeyDown = function(e){
+      if (e.keyCode == 37) {
+        onBack();
+      }
+      if (e.keyCode == 39) {
+        onForward();
+      }
+    };
 
     var backElement = document.createElement('div');
     var forwardElement = document.createElement('div');
@@ -68,8 +75,7 @@ function FrameControls(opts) {
     forwardElement.innerText = '>';
     backElement.addEventListener('click', onBack);
     forwardElement.addEventListener('click', onForward);
-    Mousetrap.bind('left', onBack);
-    Mousetrap.bind('right', onForward);
+    document.addEventListener('keydown', onKeyDown);
 
     arrowControlElement.appendChild(backElement);
     arrowControlElement.appendChild(forwardElement);
