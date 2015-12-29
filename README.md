@@ -40,6 +40,5 @@ the interactive canvas session.
 - __shapeDeleted__: Removes `:shape` from the canvas.
 - __shapeMoved__: Moves `:shape` on the canvas to a new location.
 - __shapeSelected__: Selects `:shape`.
-
-*- __drawBoundaries__: Sends `:width` and `:height` of the user's canvas. __Not yet implemented.__*
+- __drawBoundaries__: Sends `:width` and `:height` of the user's canvas. Makes sure we have the whole thing in bounds.
 *- __setBackground__: Toggles background images -- just 'graphPaper', so far. __Not yet implemented.__*
