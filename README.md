@@ -15,6 +15,15 @@ the interactive canvas session.
 
 - Include `literally-canvas-replay.min.js` & `literally-canvas-replay.css` in your project. Take a look at `index.html` & `demo.js` for an example of usage.
 
+- If you're not using browserify, a global is exposed. Include your file and you can use it like this:
+  ```
+  opts = {};
+  actions = [];
+
+  lcr = new LiterallyCanvasReplay(opts);
+  lcr.processActions(actions);
+  ```
+
 ## Message Format
 
 - __displayName__: Person drawing
