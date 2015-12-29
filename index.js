@@ -59,4 +59,4 @@ function LiterallyCanvasReplay(opts){
   };
 }
 
-window.LCR = LiterallyCanvasReplay;
+window.LiterallyCanvasReplay = LiterallyCanvasReplay;
