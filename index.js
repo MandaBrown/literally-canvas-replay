@@ -7,6 +7,7 @@ module.exports = LiterallyCanvasReplay;
 
 function LiterallyCanvasReplay(opts){
   opts = opts || {};
+  var logger = new Logger(opts);
 
   var currentState = {
     studentDrawing: false
@@ -25,6 +26,7 @@ function LiterallyCanvasReplay(opts){
   });
 
   var processActions = function(actions) {
+    logger.log('About to process actions', actions);
     actions = filterActions(actions);
     frameControls.loadActions(actions, function(actionIndex) {
       processActionsToIndex(actions, actionIndex);
@@ -33,12 +35,14 @@ function LiterallyCanvasReplay(opts){
   };
 
   var processActionsToIndex = function(actions, index) {
+    logger.log('Processing actions to index', actions, index);
     canvasActions.execute('clear');
     indicators.startReplay();
 
     if (index > actions.length - 1) index = actions.length - 1;
     for (var i = 0; i <= index; i++) {
       action = actions[i];
+      logger.log('Executing action', action.message.action, action.message);
       canvasActions.execute(action.message.action, action.message);
     }
 
@@ -60,3 +64,19 @@ function LiterallyCanvasReplay(opts){
 }
 
 window.LiterallyCanvasReplay = LiterallyCanvasReplay;
+
+function Logger(opts) {
+  opts = opts || {};
+
+  var log;
+
+  if (opts.logToConsole) {
+    log = function() { console.log(arguments) };
+  } else {
+    log = function() {};
+  }
+
+  return {
+    log: log
+  };
+}
