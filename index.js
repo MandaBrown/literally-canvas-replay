@@ -7,13 +7,19 @@ module.exports = LiterallyCanvasReplay;
 
 function LiterallyCanvasReplay(opts){
   opts = opts || {};
+  var lcOptions = opts.lcOptions || {
+    backgroundColor: '#FFF',
+    imageSize: { width: 1000, height: 500 },
+    keyboardShortcuts: false
+  };
+
   var logger = new Logger(opts);
 
   var currentState = {
     studentDrawing: false
   };
 
-  var literalCanvas = LC.init(opts.canvasElement, opts.lcOptions);
+  var literalCanvas = LC.init(opts.canvasElement, lcOptions);
   // Hack to turn off drawing.
   literalCanvas.setTool(new LC.tools.Eyedropper(literalCanvas));
 
