@@ -50,12 +50,12 @@ function CanvasUtils(canvas) {
     duplicateOffset = 0;
   };
 
-  var onShapeMoved = function() {
+  var onUpdateShape = function() {
     resetOffset();
   };
 
   canvasEvents = [
-    canvas.on('shapeMoved', onShapeMoved)
+    canvas.on('updateShape', onUpdateShape)
   ];
 
   return {
