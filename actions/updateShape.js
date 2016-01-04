@@ -7,7 +7,7 @@ function UpdateShape(canvas){
   var utils = new CanvasUtils(canvas);
 
   var name = 'updateShape';
-  var action = function(shape) {
+  var action = function(message) {
     var shape = LC.JSONToShape(message.shape);
     utils.deleteShape(shape, false);
     canvas.saveShape(shape, false);

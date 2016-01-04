@@ -7,7 +7,7 @@ function DeleteShape(canvas){
   var utils = new CanvasUtils(canvas);
 
   var name = 'deleteShape';
-  var action = function(shape) {
+  var action = function(message) {
     var shape = LC.JSONToShape(message.shape);
     utils.deleteShape(shape, false);
   };
