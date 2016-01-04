@@ -1,12 +1,12 @@
 var LC = require('../vendor/literallycanvas-core.min.js');
 var CanvasUtils = require('../utils/canvas-utils');
 
-module.exports = ShapeDeleted;
+module.exports = DeleteShape;
 
-function ShapeDeleted(canvas){
+function DeleteShape(canvas){
   var utils = new CanvasUtils(canvas);
 
-  var name = 'shapeDeleted';
+  var name = 'deleteShape';
   var action = function(shape) {
     var shape = LC.JSONToShape(message.shape);
     utils.deleteShape(shape, false);
