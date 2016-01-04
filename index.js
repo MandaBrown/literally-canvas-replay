@@ -43,6 +43,7 @@ function LiterallyCanvasReplay(opts){
   var processActionsToIndex = function(actions, index) {
     logger.log('Processing actions to index', actions, index);
     canvasActions.execute('clear');
+    literalCanvas.backgroundShapes = [];
     indicators.startReplay();
 
     if (index > actions.length - 1) index = actions.length - 1;
