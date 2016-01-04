@@ -1,5 +1,3 @@
-var LC = require('../vendor/literallycanvas-core.min.js');
-
 module.exports = Clear;
 
 function Clear(canvas){
