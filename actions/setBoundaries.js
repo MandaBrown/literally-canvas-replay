@@ -1,7 +1,7 @@
-module.exports = DrawBoundaries;
+module.exports = SetBoundaries;
 
-function DrawBoundaries(canvas){
-  var name = 'drawBoundaries';
+function SetBoundaries(canvas){
+  var name = 'setBoundaries';
   var action = function(boundaries) {
     var clientDimensions = {
       width: canvas.containerEl.clientWidth,
