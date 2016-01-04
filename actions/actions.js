@@ -3,7 +3,7 @@ var Clear = require('./clear.js');
 var TurnOnDrawing = require('./turnOnDrawing.js');
 var TurnOffDrawing = require('./turnOffDrawing.js');
 var UpdateShape = require('./updateShape.js');
-var ShapeDeleted = require('./shapeDeleted.js');
+var DeleteShape = require('./deleteShape.js');
 var SetBoundaries = require('./setBoundaries.js');
 
 module.exports = Actions;
@@ -16,7 +16,7 @@ function Actions(literalCanvas, indicators){
   var turnOnDrawing = new TurnOnDrawing(studentDrawingIndicator);
   var turnOffDrawing = new TurnOffDrawing(studentDrawingIndicator);
   var updateShape = new UpdateShape(literalCanvas);
-  var shapeDeleted = new ShapeDeleted(literalCanvas);
+  var deleteShape = new DeleteShape(literalCanvas);
   var setBoundaries = new SetBoundaries(literalCanvas);
 
   var actions = [
@@ -25,7 +25,7 @@ function Actions(literalCanvas, indicators){
     turnOnDrawing,
     turnOffDrawing,
     updateShape,
-    shapeDeleted,
+    deleteShape,
     setBoundaries
   ];
 
