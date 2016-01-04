@@ -2,10 +2,17 @@ var Shape = require('./shape.js');
 var Clear = require('./clear.js');
 var TurnOnDrawing = require('./turnOnDrawing.js');
 var TurnOffDrawing = require('./turnOffDrawing.js');
+<<<<<<< HEAD
 var ShapeSelected = require('./shapeSelected.js');
 var ShapeMoved = require('./shapeMoved.js');
 var ShapeDeleted = require('./shapeDeleted.js');
 var DrawBoundaries = require('./drawBoundaries.js');
+=======
+var UpdateShape = require('./updateShape.js');
+var DeleteShape = require('./deleteShape.js');
+var SetBoundaries = require('./setBoundaries.js');
+var SetBackground = require('./setBackground.js');
+>>>>>>> master
 
 module.exports = Actions;
 
@@ -16,20 +23,20 @@ function Actions(literalCanvas, indicators){
   var studentDrawingIndicator = indicators.findByName('studentDrawing');
   var turnOnDrawing = new TurnOnDrawing(studentDrawingIndicator);
   var turnOffDrawing = new TurnOffDrawing(studentDrawingIndicator);
-  var shapeSelected = new ShapeSelected(literalCanvas);
-  var shapeMoved = new ShapeMoved(literalCanvas);
-  var shapeDeleted = new ShapeDeleted(literalCanvas);
-  var drawBoundaries = new DrawBoundaries(literalCanvas);
+  var updateShape = new UpdateShape(literalCanvas);
+  var deleteShape = new DeleteShape(literalCanvas);
+  var setBoundaries = new SetBoundaries(literalCanvas);
+  var setBackground = new SetBackground(literalCanvas);
 
   var actions = [
     shape,
     clear,
     turnOnDrawing,
     turnOffDrawing,
-    shapeSelected,
-    shapeMoved,
-    shapeDeleted,
-    drawBoundaries
+    updateShape,
+    deleteShape,
+    setBoundaries,
+    setBackground
   ];
 
   var allowedActions = function() {

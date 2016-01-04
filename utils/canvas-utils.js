@@ -28,7 +28,7 @@ function CanvasUtils(canvas) {
     });
     canvas.setShapesInProgress([]);
     canvas.repaintAllLayers();
-    if (trigger) canvas.trigger('shapeDeleted', { shape: shape } );
+    if (trigger) canvas.trigger('deleteShape', { shape: shape } );
     if (trigger) canvas.trigger('drawingChange');
   };
 
@@ -50,12 +50,12 @@ function CanvasUtils(canvas) {
     duplicateOffset = 0;
   };
 
-  var onShapeMoved = function() {
+  var onUpdateShape = function() {
     resetOffset();
   };
 
   canvasEvents = [
-    canvas.on('shapeMoved', onShapeMoved)
+    canvas.on('updateShape', onUpdateShape)
   ];
 
   return {

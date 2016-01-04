@@ -1,13 +1,13 @@
 var LC = require('../vendor/literallycanvas-core.min.js');
 var CanvasUtils = require('../utils/canvas-utils');
 
-module.exports = ShapeMoved;
+module.exports = UpdateShape;
 
-function ShapeMoved(canvas){
+function UpdateShape(canvas){
   var utils = new CanvasUtils(canvas);
 
-  var name = 'shapeMoved';
-  var action = function(shape) {
+  var name = 'updateShape';
+  var action = function(message) {
     var shape = LC.JSONToShape(message.shape);
     utils.deleteShape(shape, false);
     canvas.saveShape(shape, false);
