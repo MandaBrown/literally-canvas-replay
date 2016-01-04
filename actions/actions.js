@@ -5,7 +5,7 @@ var TurnOffDrawing = require('./turnOffDrawing.js');
 var ShapeSelected = require('./shapeSelected.js');
 var ShapeMoved = require('./shapeMoved.js');
 var ShapeDeleted = require('./shapeDeleted.js');
-var DrawBoundaries = require('./drawBoundaries.js');
+var SetBoundaries = require('./setBoundaries.js');
 
 module.exports = Actions;
 
@@ -19,7 +19,7 @@ function Actions(literalCanvas, indicators){
   var shapeSelected = new ShapeSelected(literalCanvas);
   var shapeMoved = new ShapeMoved(literalCanvas);
   var shapeDeleted = new ShapeDeleted(literalCanvas);
-  var drawBoundaries = new DrawBoundaries(literalCanvas);
+  var setBoundaries = new SetBoundaries(literalCanvas);
 
   var actions = [
     shape,
@@ -29,7 +29,7 @@ function Actions(literalCanvas, indicators){
     shapeSelected,
     shapeMoved,
     shapeDeleted,
-    drawBoundaries
+    setBoundaries
   ];
 
   var allowedActions = function() {
