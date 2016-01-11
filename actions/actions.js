@@ -2,17 +2,10 @@ var Shape = require('./shape.js');
 var Clear = require('./clear.js');
 var TurnOnDrawing = require('./turnOnDrawing.js');
 var TurnOffDrawing = require('./turnOffDrawing.js');
-<<<<<<< HEAD
-var ShapeSelected = require('./shapeSelected.js');
-var ShapeMoved = require('./shapeMoved.js');
-var ShapeDeleted = require('./shapeDeleted.js');
-var DrawBoundaries = require('./drawBoundaries.js');
-=======
 var UpdateShape = require('./updateShape.js');
 var DeleteShape = require('./deleteShape.js');
 var SetBoundaries = require('./setBoundaries.js');
 var SetBackground = require('./setBackground.js');
->>>>>>> master
 
 module.exports = Actions;
 
