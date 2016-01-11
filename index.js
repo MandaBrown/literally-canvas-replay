@@ -20,6 +20,18 @@ function LiterallyCanvasReplay(opts){
   };
 
   var literalCanvas = LC.init(opts.canvasElement, lcOptions);
+
+  // Not sure why, but on initial load,
+  // the canvas is stretched vertically.
+  // Triggering a resize event fixes it.
+  var onTimeout = function() {
+    evt = window.document.createEvent('UIEvents');
+    evt.initUIEvent('resize', true, false, window, 0);
+    window.dispatchEvent(evt);
+  };
+  setTimeout(onTimeout, 100);
+
+
   // Hack to turn off drawing.
   literalCanvas.setTool(new LC.tools.Eyedropper(literalCanvas));
 
