@@ -3,7 +3,16 @@ var Actions = require('./actions/actions.js');
 var FrameControls = require('./controls/frame_controls.js');
 var Indicators = require('./indicators/indicators.js');
 
-module.exports = LiterallyCanvasReplay;
+
+if (typeof module === "object" && module.exports) {
+  module.exports = LiterallyCanvasReplay;
+}
+
+if (typeof define === "function" && define.amd) {
+  define("literallycanvasreplay", [], function() {
+    return LiterallyCanvasReplay;
+  });
+}
 
 function LiterallyCanvasReplay(opts){
   opts = opts || {};
