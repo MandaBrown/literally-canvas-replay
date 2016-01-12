@@ -1,0 +1,12 @@
+{
+  "name": "literally-canvas-replay",
+  "version": "1.0",
+  "homepage": "https://github.com/mandabrown/literally-canvas-replay",
+  "authors": [
+    "Manda Brown"
+  ],
+  "description": "A way to play back recorded literally canvas messages.",
+  "main": "literally-canvas-replay.min.js",
+  "private": true,
+  "ignore": []
+}
