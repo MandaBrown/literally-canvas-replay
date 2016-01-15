@@ -1,6 +1,6 @@
 {
   "name": "literally-canvas-replay",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "When given an element to attach to and an array of whiteboard messages, this library builds a nice viewer for reviewing the interactive canvas session.",
   "main": "index.js",
   "scripts": {
