@@ -1,5 +1,5 @@
-const MAX_IMAGE_WIDTH = 1000;
-const MAX_IMAGE_HEIGHT = 500;
+var MAX_IMAGE_WIDTH = 1000;
+var MAX_IMAGE_HEIGHT = 500;
 
 var LiterallyCanvasReplay = require('./index.js');
 
